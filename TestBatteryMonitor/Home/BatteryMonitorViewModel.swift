@@ -47,11 +47,13 @@ class BatteryMonitorViewModel: ObservableObject {
     // Start battery monitoring
     func startMonitoring() {
         diContainer.services.monitoringService.startMonitoring()
+        stateOfMonitoring.toggle()
     }
 
     // Stops battery monitoring and clears timer. Logs the stop event.
     func stopMonitoring() {
         diContainer.services.monitoringService.stopMonitoring()
+        stateOfMonitoring.toggle()
     }
 
     // Helper to get the current time formatted as HH:mm (e.g., "14:30")
