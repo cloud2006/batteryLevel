@@ -35,6 +35,7 @@ struct BatteryMonitorView: View {
                     }
                 }
             }
+            .listStyle(.plain)
         }
         .padding()
     }
